@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="2"
+    android:columnCount="3"
     android:layout_margin="5dp"
     tools:context="comwow2778.naver.blog.project2.Main2Activity">
 
@@ -13,84 +13,247 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="레스토랑을 시작하려면 아래를 클릭하세요"
-        android:layout_columnSpan="2"
+        android:layout_columnSpan="3"
         />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/s1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="시작함" />
+        android:text="시작함"
+
+        />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="예약시간 경과시간"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+
+        />
 
     <Chronometer
-        android:id="@+id/chronometer2"
+        android:id="@+id/c1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:visibility="invisible"
+        />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:background="@color/colorAccent"
+        android:visibility="invisible"
+        android:id="@+id/f1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            >
+            android:id="@+id/L1">
 
             <DatePicker
-                android:id="@+id/datePicker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/d1"
+                android:layout_width="392dp"
+                android:layout_height="465dp"
                 android:gravity="center"
-
+                android:headerBackground="@android:color/holo_red_light"
                 />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="이전" />
-
-                <Button
-                    android:id="@+id/button13"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="다음"
-                    />
-            </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:id="@+id/L2">
 
             <TimePicker
-                android:id="@+id/timePicker2"
+                android:id="@+id/d2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"/>
+                android:headerBackground="@android:color/holo_red_light" />
         </LinearLayout>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:columnCount="2"
+            android:layout_margin="10dp"
+            android:visibility="invisible"
+            android:id="@+id/L3">
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성인" />
 
-        <LinearLayout
+            <EditText
+                android:id="@+id/e1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="청소년" />
+
+            <EditText
+                android:id="@+id/e2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어린이" />
+
+            <EditText
+                android:id="@+id/e3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+        </GridLayout>
+
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+            android:background="@android:color/background_light"
+            android:layout_margin="10dp"
+            android:columnCount="2"
+            android:visibility="invisible"
+            android:id="@+id/L4"
+            >
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="center_horizontal"
+                android:text="예약 결과는 다음과 같습니다."
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날짜" />
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0000년 0월 0일" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간" />
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00시 00분" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성인" />
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0명" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="청소년" />
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0명" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어린이" />
+
+            <TextView
+                android:id="@+id/t6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0명" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약되었습니다."
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20dp"
+                android:layout_columnSpan="2"/>
+
+            <Button
+                android:id="@+id/b10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다음 Activity"
+                android:onClick="onmyclick"/>
+
+        </GridLayout>
+
     </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/L5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_columnSpan="3">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:onClick="onmyclick"
+            android:text="이전"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onmyclick"
+            android:text="다음"
+            android:visibility="invisible" />
+
+    </LinearLayout>
 </GridLayout>
